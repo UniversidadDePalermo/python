@@ -1,37 +1,19 @@
-print('Valores del primer ángulo: ')
-grados_a = float(input('Ingrese grados: '))
-minutos_a = int(input('Ingrese minutos: '))
-segundos_a = int(input('Ingrese segundos: '))
+#Ejercicio 17#
+angulo1grado = int(input("Ingresar grados del 1er Angulo: "))
+angulo1minutos = int(input("Ingresar minutos del 1er Angulo: "))
+angulo1segundos = int(input("Ingresar segundos del 1er Angulo: "))
+angulo2grado = int(input("Ingresar grados del 2do Angulo: "))
+angulo2minutos = int(input("Ingresar minutos del 2do Angulo: "))
+angulo2segundos = int(input("Ingresar segundos del 2do Angulo: "))
 
-print('\nValores del segundo ángulo: ')
-grados_b = float(input('Ingrese grados: '))
-minutos_b = int(input('Ingrese minutos: '))
-segundos_b = int(input('Ingrese segundos: '))
+Suma1 = angulo1segundos + angulo2segundos
+Suma2 = angulo1minutos + angulo2minutos
+Suma3 = angulo1grado + angulo2grado
 
-excede_minutos = minutos_a > 60 or minutos_b > 60
-excede_segundos = segundos_a > 60 or segundos_b > 60
-
-if excede_minutos:
-  print('Los minutos no deben excederse de 60\'')
-
-if excede_segundos:
-  print('Los segundos no deben excederse de 60\'\'')
-
-if not excede_minutos and not excede_segundos:
-  suma_grados = grados_a + grados_b
-  suma_minutos = minutos_a + minutos_b
-  suma_segundos = segundos_a + segundos_b
-
-  if suma_segundos > 60:
-    minutos = suma_segundos / 60
-    segundos = minutos - int(minutos)
-    suma_segundos = segundos * 60
-    suma_minutos = minutos + suma_minutos
-
-  if suma_minutos > 60:
-    grados = suma_minutos / 60
-    minutos = grados - int(grados)
-    suma_minutos = minutos * 60
-    suma_grados = minutos + suma_grados
-
-  print(f'{int(suma_grados)}º {int(suma_minutos)}\'\' {int(suma_segundos)}\'')
+if Suma1 >= 60:
+    Suma2 += 1
+    Suma1 -= 60
+if Suma2 >= 60:
+    Suma3 += 1
+    Suma2 -= 60
+print(f"La suma da como resultado {Suma3} grados, {Suma2} minutos, y {Suma1} segundos")

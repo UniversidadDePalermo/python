@@ -1,11 +1,21 @@
-numero_de_mes = int(input('Ingrese número de mes: '))
+mes = int(input("Ingrese el numero del mes: "))
 
-if numero_de_mes >= 1 and numero_de_mes <= 12:
-  if numero_de_mes == 1:
-    print('Enero tiene 31 días')
-  elif numero_de_mes == 2:
-    print('Febrero tiene 28 días')
-  elif numero_de_mes == 3:
-    print('Febrero tiene 28 días')
-else:
-  print('Esta mal')
+while mes > 0 and mes < 13:
+    if mes %2 == 0 and mes != 2:
+        print("El mes tiene 30 dias")
+        mes = int(input("Ingrese el numero del mes: "))
+        if mes > 12 or mes < 1:
+            print("Ingrese un numero entre 1 y 12")
+            mes = int(input("Ingrese el numero del mes: "))
+    elif mes %2 == 1:
+        print("El mes tiene 31 dias")
+        mes = int(input("Ingrese el numero del mes: "))
+        if mes > 12 or mes < 1:
+            print("Ingrese un numero entre 1 y 12")
+            mes = int(input("Ingrese el numero del mes: "))
+    elif mes == 2:
+        print("El mes tiene 28 dias")
+        mes = int(input("Ingrese el numero del mes: "))
+        if mes > 12 or mes < 1:
+            print("Ingrese un numero entre 1 y 12")
+            mes = int(input("Ingrese el numero del mes: "))

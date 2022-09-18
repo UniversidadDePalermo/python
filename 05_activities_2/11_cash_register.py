@@ -12,7 +12,17 @@ cantidad_articulo_7 = 0
 while codigo_de_articulo == 1 or codigo_de_articulo == 3 or codigo_de_articulo == 5 or codigo_de_articulo == 7:
   numero_de_factura = int(input('Ingrese número de factura: '))
   cantidad_del_articulo = int(input('Ingrese cantidad del articulo: '))
+
+  while cantidad_del_articulo <= 0:
+    print('La cantidad del articulo debe ser mayor o igual a 1')
+    cantidad_del_articulo = int(input('Ingrese cantidad del articulo: '))
+
   precio_unitario = int(input('Ingrese precio unitario: '))
+
+  while precio_unitario < 0:
+    print('El precio unitario debe ser mayor o igual a 0')
+    precio_unitario = int(input('Ingrese precio unitario: '))
+
   total_factura = cantidad_del_articulo * precio_unitario
   total_general_facturado = total_general_facturado + total_factura
 

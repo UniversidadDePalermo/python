@@ -1,0 +1,27 @@
+arreglo = []
+n = int(input('Ingrese el numero de elementos: '))
+for i in range (0, n):
+    arreglo.append(int(input("Ingrese elelemento: ")))
+print(arreglo)
+multiplo_5 = 0
+multiplo_10 = 0
+for i in arreglo:
+    if i%5 == 0 and multiplo_5 == 0:
+        multiplo_5 = i
+    elif i%5 == 0 and i < multiplo_5:
+        multiplo_5 = i
+for i in arreglo:
+    if i%10 == 0 and multiplo_10 == 0:
+        multiplo_10 = i
+    elif i%10 == 0 and i > multiplo_10:
+        multiplo_10 = i
+m = 0
+for i in arreglo:
+    if i == multiplo_5:
+        print(f"El menor multiplo de 5 es {multiplo_5} en posicion {m}")
+    m += 1
+m = 0
+for i in arreglo:
+    if i == multiplo_10:
+        print(f"El mayor multiplo de 10 es {multiplo_10} en posicion {m}")
+    m += 1

@@ -6,7 +6,7 @@ while cont < 15:
     for i in range(1, numero+1):
         if (numero%i == 0):
             div += 1
-    if div == 2 and i == numero:
+    if div == 2:
         arreglo.append(numero)
         cont += 1
     numero += 1
